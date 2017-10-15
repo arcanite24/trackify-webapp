@@ -43,7 +43,7 @@ export default {
         if (res.data.id) {
           localStorage.setItem('userId', res.data.userId)
           localStorage.setItem('token', res.data.id)
-          this.$router.replace({name: 'home'})
+          this.$router.replace({name: 'dashboard', params: {x: 1}})
         } else {
           this.toast = 'Something happened with the server... Sorry :('
           this.showToast = true

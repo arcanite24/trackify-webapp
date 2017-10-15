@@ -11,6 +11,7 @@ import Register from '@/components/core/register.comp'
 import Home from '@/components/core/home.comp'
 
 import Dashboard from '@/components/core/dash.comp'
+import Search from '@/components/core/search.comp'
 
 Vue.use(Router)
 Vue.use(Vuetify)
@@ -19,8 +20,9 @@ export default new Router({
   routes: [
     {path: '/', name: 'login', component: Login},
     {path: '/register', name: 'register', component: Register},
-    {path: '/home', name: 'home', component: Home, children: [
-      {path: 'dashboard', name: 'dashboard', component: Dashboard}
+    {path: '/home/:x', name: 'home', component: Home, children: [
+      {path: 'dashboard', name: 'dashboard', component: Dashboard},
+      {path: 'search', name: 'search', component: Search}
     ]},
   ]
 })
